@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VMS-Ug-Bwb">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="edC-Ta-wrh">
+            <objects>
+                <navigationController id="VMS-Ug-Bwb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="jaX-Y7-hy3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="thg-yb-EF3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="51Z-UP-sMT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-585" y="38"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PracticeProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lhI-7r-pTN">
+                                <rect key="frame" x="26" y="269" width="268" height="30"/>
+                                <color key="backgroundColor" red="0.62261698454617576" green="0.69465613844534457" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="yuo-FS-9mi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="auu-Pf-URt"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeb-R2-95L">
+                                <rect key="frame" x="135" y="329" width="50" height="30"/>
+                                <color key="backgroundColor" red="0.18487809657346457" green="0.26764865251175779" blue="0.56241819371727741" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="XJl-9K-FWm"/>
+                                    <constraint firstAttribute="height" constant="30" id="mJd-fp-DjF"/>
+                                </constraints>
+                                <state key="normal" title="TAP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ii-KU-WkR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDT-gW-MdJ">
+                                <rect key="frame" x="110" y="209" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.093041938246656991" green="0.55998445680628273" blue="0.098138600818502245" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="7CL-3G-fqR"/>
+                                    <constraint firstAttribute="height" constant="30" id="p4d-2j-xWE"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.99569880590000004" blue="0.98940449409999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Code"/>
+                                <connections>
+                                    <action selector="codeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U7I-mc-zgT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.86220924838179536" green="0.91876961542600966" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jeb-R2-95L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="47y-iv-GXG"/>
+                            <constraint firstItem="jeb-R2-95L" firstAttribute="top" secondItem="lhI-7r-pTN" secondAttribute="bottom" constant="30" id="80n-h5-FJf"/>
+                            <constraint firstItem="jeb-R2-95L" firstAttribute="top" secondItem="TDT-gW-MdJ" secondAttribute="bottom" constant="8" symbolic="YES" id="8Er-c7-FQI">
+                                <variation key="heightClass=compact-widthClass=compact" constant="70"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="90"/>
+                            </constraint>
+                            <constraint firstItem="lhI-7r-pTN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ez5-w9-gxv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lhI-7r-pTN" secondAttribute="trailing" id="S0L-No-hRV">
+                                <variation key="heightClass=regular" constant="10"/>
+                                <variation key="heightClass=compact-widthClass=compact" constant="100"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="150"/>
+                            </constraint>
+                            <constraint firstItem="lhI-7r-pTN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="S6f-yl-nuB">
+                                <variation key="heightClass=regular" constant="10"/>
+                                <variation key="heightClass=compact-widthClass=compact" constant="100"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="150"/>
+                            </constraint>
+                            <constraint firstItem="TDT-gW-MdJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dmQ-S3-qWt"/>
+                            <constraint firstItem="jeb-R2-95L" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eTP-dL-hJt"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="S0L-No-hRV"/>
+                                <exclude reference="S6f-yl-nuB"/>
+                                <exclude reference="eTP-dL-hJt"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="S0L-No-hRV"/>
+                                <include reference="S6f-yl-nuB"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="subviews">
+                                <exclude reference="lhI-7r-pTN"/>
+                                <include reference="jeb-R2-95L"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="S0L-No-hRV"/>
+                                <include reference="S6f-yl-nuB"/>
+                                <include reference="8Er-c7-FQI"/>
+                                <include reference="eTP-dL-hJt"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="S0L-No-hRV"/>
+                                <include reference="S6f-yl-nuB"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="lhI-7r-pTN"/>
+                                <include reference="jeb-R2-95L"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="8Er-c7-FQI"/>
+                                <exclude reference="eTP-dL-hJt"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="Aga-Wj-hUf"/>
+                    <connections>
+                        <outlet property="tapBtn" destination="jeb-R2-95L" id="7D5-cJ-9O9"/>
+                        <outlet property="userNameText" destination="lhI-7r-pTN" id="4kA-Nx-wmp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="322.875" y="39.75"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="RqS-fd-g9N">
+            <objects>
+                <viewController storyboardIdentifier="homeStoryBoardID" id="e9p-bP-PdO" customClass="HomeViewController" customModule="PracticeProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Gu-q6-KGz"/>
+                        <viewControllerLayoutGuide type="bottom" id="OOu-zl-jut"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M0M-oB-AGS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hello" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cU7-i6-kHJ">
+                                <rect key="frame" x="86" y="83" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="w7I-Oe-Dmj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5PE-JI-47j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1065" y="39"/>
+        </scene>
+    </scenes>
+</document>
