@@ -8,7 +8,7 @@
 
 import XCTest
 
-@testable import PracticeProject
+@testable import PracticeProjec
 
 class PersonTests: XCTestCase {
     
