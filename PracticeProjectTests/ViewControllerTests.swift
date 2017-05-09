@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import PracticeProjec
+@testable import PracticeProject
 
 class ViewControllerTests: XCTestCase {
     
